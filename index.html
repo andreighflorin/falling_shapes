@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Falling Shapes</title>
+    <link rel="stylesheet" href="/src/ui/styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <div id="stage-wrapper">
+        <!-- PIXI canvas is injected here. HTML overlays are positioned over it. -->
+        <div id="canvas-host"></div>
+
+        <!-- Top-left stats overlay (BONUS 5c) -->
+        <div id="stats-overlay" class="overlay">
+          <div class="stat">
+            <span class="stat-label">Shapes</span>
+            <span id="stat-count" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Surface area</span>
+            <span id="stat-area" class="stat-value">0 px²</span>
+          </div>
+        </div>
+
+        <!-- Bottom controls overlay (BONUS 6) -->
+        <div id="controls-overlay" class="overlay">
+          <div class="control-group">
+            <span class="control-title">Number of shapes per second</span>
+            <div class="control-row">
+              <button id="rate-dec" class="ctrl-btn" aria-label="Decrease shapes per second">−</button>
+              <span id="rate-value" class="ctrl-value">1</span>
+              <button id="rate-inc" class="ctrl-btn" aria-label="Increase shapes per second">+</button>
+            </div>
+          </div>
+          <div class="control-group">
+            <span class="control-title">Gravity value</span>
+            <div class="control-row">
+              <button id="gravity-dec" class="ctrl-btn" aria-label="Decrease gravity">−</button>
+              <span id="gravity-value" class="ctrl-value">1</span>
+              <button id="gravity-inc" class="ctrl-btn" aria-label="Increase gravity">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
